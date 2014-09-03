@@ -60,7 +60,7 @@ DocUtils.utf8ToWord = function(string) {
   _ref = DocUtils.charMap;
   for (startChar in _ref) {
     endChar = _ref[startChar];
-    string = string.replace(new RegExp(DocUtils.escapeRegExp(startChar), "g"), endChar);
+    string = string.replace ? string.replace(new RegExp(DocUtils.escapeRegExp(startChar), "g"), endChar) : '';
   }
   return string;
 };
